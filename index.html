@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/logop.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Linen Shop</title>
+</head>
+<body class="mr-10 ml-10">
+<!-- notre header ou la bar de navigation -->
+    <header>
+        <nav class="flex  justify-between items-center">
+            <!--logo et home-->
+            <div id="logo" class="flex">
+
+                <img src="/image/Logo.png" alt="le logo de notre entreprise Linen shop" >
+                <ul class="flex ml-10 max-md:hidden">
+                    <li><a href="#" class="flex ml-10 mt-7 text-sm ">HOME</a></li>
+                    <li><a href="#" class="flex ml-10 mt-7 text-sm">SHOP</a></li>
+                    <li><a href="#" class="flex ml-10 mt-7 text-sm">MAGAZINE</a></li>
+                </ul>
+            </div >
+            <!--le panier et le login -->
+           
+            <div id="panier" class="flex justify-center items-center">
+                <a href="" class="mr-7"><img src="/image/CartButton.png" alt=" logo de la marque "></a>
+                <a href="" class="text-sm max-md:hidden">LOGIN</a>
+               
+                <div class="md:hidden">
+                    <img src="/image/icons8-menu-48.png" alt="logo de cadi ">
+                </div>
+
+                <div class="border bg-slate-200 p-3  mt-[180px] absolute invisible " id="liste_burger">
+                    <ul >
+                    <li><a href="#" class="text-sm ">LOGIN</a></li>
+                    <li><a href="#" class="text-sm">HOME</a></li>
+                    <li><a href="#" class="text-sm">SHOP</a></li>
+                    <li><a href="#" class="text-sm">MAGAZINE</a></li>
+                    </ul>
+                </div>
+               
+            </div>
+            
+        </nav>
+    </header>
+    <!-- corps de la page -->
+    <main>
+<!-- la barre  de recherche  -->
+<!-- 
+    <div class="relative left-[1165px] top-10">
+                <div id="safari_logo" class="flex max-sm:hidden" >
+                    <p class="text-sm">Powered by Algolia</p>
+                    <img src="/image/Sajari Logo.png" class="ml-4 w-5 h-5" alt="">
+                </div>
+            </div>  -->
+
+  <section >
+    
+    <div class="flex items-center justify-around max-xl:flex-col ">
+                
+                <div class="flex space-x-10">
+                    <div><img src="/image/Search.png" alt="rechercher" ></div>
+                    <div class="relative">
+                            <input type="search" class="w-[1220px] h-14 border-black  border-b-2 outline-none text-3xl max-xl:w-[400px] max-md:w-[300px]"  id="search" value="living room" >
+                            <div class="absolute left-[1050px] top-6 ">
+                                 <div id="safari_logo" class="flex max-md:hidden" > 
+                                    <p class="text-sm">Powered by Algolia</p>
+                                    <img src="/image/SajariLogo.png" class="ml-4 w-5 h-5" alt="logo de Sajari">
+                                </div>
+                            </div> 
+
+                    </div>
+                </div>
+                        <!-- ROMARIC SELECT  -->
+                <div  class="flex-col">
+                            <select class="w-[430px] h-14 text-xl max-xl:mt-[70px]" id="select-box1" 
+                            >
+                            <option value="">Best match</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                            </select>
+
+                            <select  Class="w-[430px] h-14 text-xl xl:hidden md:hidden" id="select-box2" >
+                            <option value="">Filter by</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                            </select>
+                            
+                </div>
+                      
+        </div>
+        </section>
+        <!-- filtrage et barre deroulante -->
+     <!--      <section>
+
+        </section> -->
+        <!-- les grilles des different articles -->
+     <section >
+        <div id="aligne_grid" class="grid grid-cols-4  gap-x-10 gap-y-10 mt-20 max-md:flex max-md:flex-col" >
+            <!--grille des article passer en parametre DANIEL GRAH -->
+       
+                    <div id="select2" class="max-xl:hidden">
+                        
+                        <p id="mot" class="text-slate-400 mb-[20px]">Filter BY</p>
+
+                        <div  id="filtrage" >
+            
+                          <div class="select-container">
+                            <select  class="w-[430px] h-20" id="select-box3"  name="select3" >
+                                <option value="">Best match</option>
+                              <option value="dog">Dog</option>
+                              <option value="cat">Cat</option>
+                              <option value="hamster">Hamster</option>
+                              <option value="parrot">Parrot</option>
+                              <option value="spider">Spider</option>
+                              <option value="goldfish">Goldfish</option>
+                            </select>
+                         </div>
+            
+            
+                         <div class="select-container">
+                            <select  class="w-[430px] h-20" id="select-box4"  name="seletc4" >
+                                <option value="">Best match</option>
+                              <option value="dog">Dog</option>
+                              <option value="cat">Cat</option>
+                              <option value="hamster">Hamster</option>
+                              <option value="parrot">Parrot</option>
+                              <option value="spider">Spider</option>
+                              <option value="goldfish">Goldfish</option>
+                            </select>
+                         </div>
+            
+            
+                         <div class="select-container">
+                            <select  class="w-[430px] h-20" id="select-box5"  name="select5" >
+                                <option value="">Best match</option>
+                              <option value="dog">Dog</option>
+                              <option value="cat">Cat</option>
+                              <option value="hamster">Hamster</option>
+                              <option value="parrot">Parrot</option>
+                              <option value="spider">Spider</option>
+                              <option value="goldfish">Goldfish</option>
+                            </select>
+                         </div>
+            
+            
+                        
+                   <!--  range of price --> 
+                     <p  class="mt-[20px] md:hidden" >Range price </p>
+                     <div class="wrapper">
+                     
+                        <div class="container">
+                            <div class="slider-track">    </div>
+                            <input type="range" min="0" max="10000" value="30" id="slider-1" oninput="slideOne()">
+                            <input type="range" min="0" max="10000" value="900" id="slider-2" oninput="slideTwo()">
+                        </div>
+                          <div class="values">
+                            <span id="range1">
+                                0
+                            </span>
+                            
+                            <span id="range2">
+                                100
+                            </span>
+                        </div> 
+                    </div>
+                        </div>
+                        
+
+
+                    </div>
+                    <!-- les image des different artick -->
+                <div class="gri1">
+                <!-- article 1  -->
+                    <div class="grill-contains">
+                         <div class="article"><img src="/image/ai-generated-8702726_1280.jpg" alt=""> </div>   
+                            <!-- info article 1-->
+                            <div class="flex justify-between">
+                                <div class="left-info">
+                                    <P>White Shirt </P>
+                                    <p>SLIME</p>
+                                    <div class="flex">
+                                        
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="rigth-info">
+                                     <!-- prix des marchandise  -->
+                                     <p>$250</p>
+                                     <img src="/image/icons8-ajouter-au-panier-50.png" alt="">
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+                    <!-- article 2-->
+                <div class="gri1">
+                        <div  >
+                            <div class="article"> <img src="/image/ai-generated-8751039_640.png" alt=""> </div>
+                            <!-- info article 2-->
+                            <div class="flex justify-between">
+                                <div class="left-info">
+                                    <P>Green Shirt </P>
+                                    <p>SLIME</p>
+                                    <div class="flex">
+                                        
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="rigth-info">
+                                    <!-- prix des marchandise  -->
+                                    <p>$300</p>
+                                <img src="/image/icons8-ajouter-au-panier-50.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+                    <!-- article 3 -->
+                <div class="gri1">
+                        <div class="grill-contains">
+                            <div class="article"> <img src="/image/ai-generated-8702314_640.jpg" alt=""> </div>
+                            <!-- info article 3-->
+                            <div class="flex justify-between">
+                                <div class="left-info">
+                                    <P class="text-sm">White girl Shirt </P>
+                                    <p class="text-sm mb-3">SLIME</p>
+                                    <div class="flex">
+                                        
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="rigth-info">
+                                     <!-- prix des marchandise  -->
+                                     <p>$500</p>
+                                     <img src="/image/icons8-ajouter-au-panier-50.png" class="w-10" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+                    <!-- article 4  -->
+                <div class="gri1">
+                        <div class="grill-contains">
+                            <div class="article"> <img src="/image/ai-generated-8786356_1280.jpg "  alt=""></div>
+                            
+                            <!-- info article 4 -->
+                            <div class="flex justify-between">
+                                <div class="left-info">
+                                    <P class="text-sm">White Shirt xl </P>
+                                    <p class="text-sm mb-3">SLIME</p>
+                                    <div class="flex">
+                                        
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star-On.png" alt="">
+                                        <img src="/image/Star.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="rigth-info">
+                                    <!-- prix des marchandise  -->
+                                    <p>$504</p>
+                                    <img src="/image/icons8-ajouter-au-panier-50.png" class="w-10" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+                    <!-- article 5  -->
+                <div class="gri1">
+                     <div class="grill-contains">
+                            <div class="article"> <img src="/image/ai-generated-8751040_640.png" alt=""></div>
+                            
+                            <!-- info article 5 -->
+                            <div class="flex justify-between">
+                                        <div class="left-info">
+                                                <P class="text-sm" >White Shirt </P>
+                                                <p class="text-sm mb-3">SLIME</p>
+                                                 <div class="flex">
+                                                    
+                                                    <img src="/image/Star-On.png" alt="">
+                                                    <img src="/image/Star-On.png" alt="">
+                                                    <img src="/image/Star-On.png" alt="">
+                                                    <img src="/image/Star-On.png" alt="">
+                                                    <img src="/image/Star-On.png" alt="">
+                                                    <img src="/image/Star.png" alt="">
+            
+                                                </div>
+                                        </div>
+                                        <div class="rigth-info">
+                                            <!-- prix des marchandise  -->
+                                            <p>$542</p>
+                                            <img src="/image/icons8-ajouter-au-panier-50.png" class="w-10"  alt="">
+                                        </div>
+                                
+                          </div>
+                        
+                    </div>
+                </div>
+                    <!-- article 6 -->
+                    <div class="gri1">
+                        <div class="grill-contains">
+                            <div class="article"> <img src="/image/ai-generated-8786359_1280.jpg" alt=""> </div>
+                            
+                            <!-- info article 6 -->
+                            <div class="flex justify-between">
+                                
+                                <div class="left-info">
+                                        <P class="text-sm">MAN Shirt XL </P>
+                                        <p class="text-sm mb-3">SLIME</p>
+                                        <div class="flex">
+                                            
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star.png" alt="">
+    
+                                        </div>
+                                
+                                </div>
+                                <div class="rigth-info">
+                                     <!-- prix des marchandise  -->
+                                     <p class="text-sm">$00</p>
+                                     <img src="/image/icons8-ajouter-au-panier-50.png"  class="w-10" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- article 7 -->
+                    <div class="gri1">
+                        
+                        <div class="grill-contains">
+                           <div class="article"> <img src="/image/neon-8726714_1280.jpg" alt=""> </div> 
+                            <!-- info article 7 -->
+                            <div class="flex justify-between">
+                                
+                                <div class="left-info">
+                                        <P class="text-sm"> Star </P>
+                                        <p class="text-sm mb-3">  SLIME</p>
+                                        <div class="flex ">
+                                            
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star-On.png" alt="">
+                                            <img src="/image/Star.png" alt="">
+    
+                                        </div>
+                                
+                                </div>
+                                
+                                <div class="rigth-info">
+                                    <!-- prix des marchandise  -->
+                                    <p class="text-sm">$900</p>
+                                    <img src="/image/icons8-ajouter-au-panier-50.png" alt="" class="w-10">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+        </div>
+    </section>
+    </main>
+    <!-- les pages numerote -->
+    <footer class="flex mt-20 mb-20">
+        <div class="mr-7 bg-black p-3 text-white">1</div>
+        <div class="mr-7 p-3 ">2</div>
+        <div class="mr-7 p-3" >3</div>
+        <div class="mr-7 p-3">4</div>
+        <div class="mr-7 p-3 max-md:hidden">5</div>
+        <div class="mr-7 p-3 max-md:hidden">6</div>
+        <div class="mr-7 p-3 max-md:hidden">7</div>
+        <div class="mr-7 p-3 max-md:hidden">8</div>
+        <div class="mr-7 p-3 max-md:hidden">9</div>
+        <div class="mr-7 p-3 max-md:hidden">10</div>
+        <div class="mr-7 p-3">></div>
+    </footer>
+    <script src="range.js"></script>
+</body>
+</html>
